@@ -135,7 +135,7 @@ jQuery(document).ready(function($){
     // removed for archives.berklee.edu
 	//$('<a />').attr('href', 'https://apply.berklee.edu').html('Apply Now').addClass('mobile-apply').prependTo( mobileMenu );
 
-    var searchbox = $('.region-top-nav form#search-api-page-search-form-search-site');
+    var searchbox = $('.region-top-nav form#islandora-solr-simple-search-form');
     var searchboxClone = searchbox.clone(true, true);
     searchbox.addClass('hidden-on-small-screen');
     searchboxClone.attr('aria-hidden', 'true').prependTo(mobileMenu);

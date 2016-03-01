@@ -11,6 +11,7 @@ stylesheets[print][] = stylesheets/jjamerson_arc_print.css
 
 ; Custom JS:
 ;scripts[] = js-base/jjamerson.min.js
+;scripts[] = js/jjamerson_arc.js
 scripts[] = js/jjamerson_arc.min.js
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

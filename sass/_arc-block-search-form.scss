@@ -1,14 +1,13 @@
 /* This is a class in h5bp that hides elements but keeps them
    accessible to screen readers, packaged as a mixin: */
-#block-search-api-page-search-site,
+#block-islandora-solr-simple,
 #block-search-form {
   float: right;
   width: 30%;
   position: relative;
   /* The search bar */
 }
-#block-search-api-page-search-site #search-api-page-search-form-search-site,
-#block-search-form .google-cse,
+#block-islandora-solr-simple #islandora-solr-simple-search-form,
 #block-search-form #search-block-form {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -20,15 +19,16 @@
   width: 100%;
 }
 
+#block-islandora-solr-simple #islandora-solr-simple-search-form .form-wrapper{
+	margin-top:0; padding-top:0;
+}
 
-#block-search-api-page-search-site  #search-api-page-search-form-search-site #edit-submit-1,
-#block-search-form .google-cse .form-actions,
+#block-islandora-solr-simple #islandora-solr-simple-search-form .form-item-islandora-simple-search-query,
 #block-search-form #search-block-form .form-actions {
   background: none;
 }
 
-#block-search-api-page-search-site  #search-api-page-search-form-search-site:after,
-#block-search-form .google-cse:after,
+#block-islandora-solr-simple #islandora-solr-simple-search-form:after,
 #block-search-form #search-block-form:after {
   color: #999;
   font-family: FontAwesome;
@@ -43,8 +43,7 @@
   z-index: 2;
 }
 
-#block-search-api-page-search-site  #search-api-page-search-form-search-site input[name="keys_2"],
-#block-search-form .google-cse input[name="search_block_form"],
+#block-islandora-solr-simple #islandora-solr-simple-search-form input[name="islandora_simple_search_query"],
 #block-search-form #search-block-form input[name="search_block_form"] {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -64,14 +63,12 @@
   width: 100%;
   z-index: 1;
   border: none;
-  padding: 0.4em 0em 0.4em 1em;
+  padding: 0.4em 0em 0.4em 0.4em;
   margin-top: 0;
 }
 
-#block-search-api-page-search-site  #search-api-page-search-form-search-site input[name="keys_2"]:focus,
-#block-search-api-page-search-site  #search-api-page-search-form-search-site input[name="keys_2"]:active,
-#block-search-form .google-cse input[name="search_block_form"]:focus,
-#block-search-form .google-cse input[name="search_block_form"]:active,
+#block-islandora-solr-simple #islandora-solr-simple-search-form input[name="islandora_simple_search_query"]:focus,
+#block-islandora-solr-simple #islandora-solr-simple-search-form input[name="islandora_simple_search_query"]:active,
 #block-search-form #search-block-form input[name="search_block_form"]:focus,
 #block-search-form #search-block-form input[name="search_block_form"]:active {
   color: #777;
@@ -79,13 +76,12 @@
   opacity: 1;
 }
 
-#block-search-api-page-search-site  #search-api-page-search-form-search-site input.form-submit,
-#block-search-form .google-cse input.form-submit,
+#block-islandora-solr-simple #islandora-solr-simple-search-form input.form-submit,
 #block-search-form #search-block-form input.form-submit {
   display: none;
 }
 
-#block-search-api-page-search-site .results,
+#islandora-solr-simple-search-form .results,
 #block-search-form .results {
   -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -108,12 +104,15 @@
   height: 0 !important;
   opacity: 0;
 }
+
+#islandora-solr-simple-search-form .results.populated,
 #block-search-api-page-search-site .results.populated,
 #block-search-form .results.populated {
   opacity: 1;
   height: auto !important;
 }
-#block-search-api-page-search-site .results a,
+
+#islandora-solr-simple-search-form .results a,
 #block-search-form .results a {
   clear: both;
   color: #d81118;
@@ -124,11 +123,13 @@
   overflow: hidden;
   padding: 0.2em 0;
 }
-#block-search-api-page-search-site .results a:not(:last-child),
+
+#islandora-solr-simple-search-form .results a:not(:last-child),
 #block-search-form .results a:not(:last-child) {
   border-bottom: 1px solid #eee;
 }
-#block-search-api-page-search-site .result a:hover,
+
+#islandora-solr-simple-search-form .results a:hover,
 #block-search-form .results a:hover {
   text-decoration: underline;
 }

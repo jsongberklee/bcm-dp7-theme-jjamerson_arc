@@ -290,6 +290,7 @@ jQuery(document).ready(function($){
   }
   function resizeCampusTools() {
     var itemCount = 0;
+    	  console.log(campusToolsItems.html());
     campusToolsItems.each(function() {
       if ( $(this).hasClass('visible') ) {
         itemCount++;
@@ -1257,7 +1258,7 @@ jQuery(document).ready(function($){
     // removed for archives.berklee.edu
 	//$('<a />').attr('href', 'https://apply.berklee.edu').html('Apply Now').addClass('mobile-apply').prependTo( mobileMenu );
 
-    var searchbox = $('.region-top-nav form#search-api-page-search-form-search-site');
+    var searchbox = $('.region-top-nav form#islandora-solr-simple-search-form');
     var searchboxClone = searchbox.clone(true, true);
     searchbox.addClass('hidden-on-small-screen');
     searchboxClone.attr('aria-hidden', 'true').prependTo(mobileMenu);
@@ -1856,8 +1857,10 @@ jQuery(document).ready(function($){
 	// and updated to make it work with the search api's search block
 	// note on comment "by jsong"
 
+//#block-islandora-solr-simple #islandora-solr-simple-search-form input[name="islandora_simple_search_query"], #block-search-form #search-block-form input[name="search_block_form"]
+
   // pre-populate the search form:
-  var searchInput = $('form#search-api-page-search-form-search-site input[name="keys_2"]');
+  var searchInput = $('form#islandora-solr-simple-search-form input[name="islandora_simple_search_query"]');
   searchInput.attr('autocomplete', 'on'); // autocomplete turned on by jsong
   var searchDefaultText = 'SEARCH IN THE ARCHIVES'; // updated by jsong
 
@@ -1915,7 +1918,7 @@ jQuery(document).ready(function($){
   });
   // Connect the pseudo-submit "Go" button to the actual search bar:
   menuFilterSubmit.click(function() {
-    $('#search-api-page-search-form-search-site input[type="submit"]').click();
+    $('#islandora-solr-simple-search-form input[type="submit"]').click();
   });
 
   // load menus to be used for autocomplete terms:
@@ -1951,7 +1954,7 @@ jQuery(document).ready(function($){
         searchInput.val( menuFilterSearch.val() );
         // if the user hits the enter key, populate the real search box and submit it:
         if ( event.which == 13 ) {
-          $('#search-block-form input[type="submit"]').click();
+          $('#islandora-solr-simple-search-form input[type="submit"]').click();
         }
       } else {
         menuFilterSearch.val ( searchInput.val() );
