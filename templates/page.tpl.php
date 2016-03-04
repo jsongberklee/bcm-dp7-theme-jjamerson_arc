@@ -6,6 +6,9 @@ echo render($page['emergency_bar']);
 echo render($page['top_nav']);
 echo render($page['header']);
 echo render($page['help']);
+
+print '<div class="breadcrumb-wrapper">'.$breadcrumb.'</div>';
+
 echo ($tabs ? '<div class="container tabs-container">'.render($tabs).'</div>' : '');
 
 echo '<section id="off-screen" class="hidden">';
@@ -21,6 +24,7 @@ echo    '<div class="row">';
 echo      render($page['sidebar_first']);
 echo      '<article id="page-content" role="main" class="article">';
 echo        ($title ? "<h1 id='page-title'>{$pretitle}{$title}</h1>{$subtitle}" : '');
+
 echo        render($page['content_top']);
 echo        render($page['content']);
 echo        render($page['content_bottom']);
@@ -28,8 +32,8 @@ echo      '</article>';
 echo      render($page['sidebar_second']);
 echo    '</div>';
 echo   render($page['stripes']);
-echo   render($page['footer']);
 echo '</section>';
+echo render($page['footer']);
 
 
 echo render($page['page_bottom']);

@@ -806,3 +806,27 @@ function jjamerson_arc_form_views_exposed_form_alter(&$form, &$form_state) {
 
 // /dsm($form);
 }
+
+/**
+ * hook_breadcrumb
+ * @description: to add "BERKLEE ARCHIVES" as a root breadcrumb
+ */
+function jjamerson_arc_breadcrumb(&$variables) {
+  $breadcrumb = array();
+  foreach($variables['breadcrumb'] as $each){
+	  if(strpos($each, 'Islandora Repository') !== false){
+		}else{
+			$breadcrumb[] = $each;
+		}
+  }
+  $output = '';
+  $output = theme('item_list', array(
+    'attributes' => array(
+      'class' => array('breadcrumb', 'links', 'inline'),
+    ),
+    'items' => $breadcrumb,
+    'type' => 'ul',
+  ));
+  return $output;
+}
+/**/

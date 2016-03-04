@@ -319,7 +319,8 @@ li {
 
 }
 
-#block-block-9 > h3{text-align: left; margin: 1% 1% 0 2%;}
+#block-block-9 > h3{text-align: left; margin: 1%;}
+.region-content-bottom{text-align: center;}
 
 #block-bcm-islandora-highlighted-asset-bcm-islandora-highlighted-asset{
 
@@ -352,6 +353,27 @@ li {
 
 		}
 	}
+}
+
+ul.links.inline li{display:inline;}
+#page-content{margin-bottom:2em;}
+
+.breadcrumb-wrapper{
+	margin:6px;
+	font-weight: bold;
+	color: #aaa;
+
+	ul.links.inline li:not(.last) {
+    border-right: none;
+		padding-right:0;
+	}
+	ul.links.inline li:not(.last)::after {
+		content: "  /";
+	}
+	ul.links.inline li:not(.first) {
+    padding-left: 0;
+	}
+
 }
 
 body.no-sidebars {
@@ -556,6 +578,7 @@ $s-width: 480px;
 		i{font-style: inherit;}
 	}
 
+	.breadcrumb{margin-top:64px;}
 
 }
 

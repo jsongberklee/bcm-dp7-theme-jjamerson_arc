@@ -8139,7 +8139,11 @@ li > span.separator hr {
 
 #block-block-9 > h3 {
   text-align: left;
-  margin: 1% 1% 0 2%;
+  margin: 1%;
+}
+
+.region-content-bottom {
+  text-align: center;
 }
 
 #block-bcm-islandora-highlighted-asset-bcm-islandora-highlighted-asset .highlighted_digital_asset {
@@ -8165,6 +8169,30 @@ li > span.separator hr {
 #block-bcm-islandora-highlighted-asset-bcm-islandora-highlighted-asset .highlighted_digital_asset > div .highlighted_digital_asset_thumbnail_image img {
   width: 100%;
   max-width: 180px;
+}
+
+ul.links.inline li {
+  display: inline;
+}
+
+#page-content {
+  margin-bottom: 2em;
+}
+
+.breadcrumb-wrapper {
+  margin: 6px;
+  font-weight: bold;
+  color: #aaa;
+}
+.breadcrumb-wrapper ul.links.inline li:not(.last) {
+  border-right: none;
+  padding-right: 0;
+}
+.breadcrumb-wrapper ul.links.inline li:not(.last)::after {
+  content: "  /";
+}
+.breadcrumb-wrapper ul.links.inline li:not(.first) {
+  padding-left: 0;
 }
 
 body.no-sidebars .islandora-newspaper-content {
@@ -8380,6 +8408,10 @@ $s-width: 480px;
   }
   #block-menu-menu-login-menu i {
     font-style: inherit;
+  }
+
+  .breadcrumb {
+    margin-top: 64px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1320px) {
