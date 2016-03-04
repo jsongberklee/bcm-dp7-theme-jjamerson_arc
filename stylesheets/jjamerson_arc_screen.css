@@ -7995,9 +7995,13 @@ body.front .region-content-top {
   margin-bottom: 0;
   text-align: center;
 }
+body.front .region-stripes {
+  margin-top: 1%;
+}
 body.front .front-block {
   display: inline-block;
   vertical-align: top;
+  width: 26%;
 }
 body.front .front-block a {
   display: block;
@@ -8017,10 +8021,43 @@ body.front .front-block i.fa-anchor {
 body.front .front-block h3 {
   text-align: left;
   font-size: 125%;
-  font-weight: bold;
+  font-weight: 100;
   text-transform: uppercase;
   color: #fff;
-  margin-bottom: 8px;
+  letter-spacing: 3px;
+}
+body.front .front-block.finding-aids {
+  background-color: #4c5960;
+}
+body.front .front-block.institutional-repo {
+  background-color: #4c5960;
+}
+body.front .front-block.digital-collections {
+  background-color: #4c5960;
+}
+body.front .front-block.finding-aids, body.front .front-block.institutional-repo, body.front .front-block.digital-collections {
+  position: relative;
+}
+body.front .front-block.finding-aids a, body.front .front-block.institutional-repo a, body.front .front-block.digital-collections a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 12px 12px 0;
+}
+body.front .front-block:hover {
+  background-color: #7b8b96;
+  cursor: pointer;
+  /*
+  -webkit-border-top-right-radius:30px;
+  -webkit-border-bottom-left-radius:30px;
+  -moz-border-radius-topright:30px;
+  -moz-border-radius-bottomleft:30px;
+  border-top-right-radius:30px;
+  border-bottom-left-radius:30px;
+  */
+}
+body.front .front-block:active {
+  background-color: #ee243c;
 }
 
 #block-block-3 .sub-title {
@@ -8085,6 +8122,43 @@ li > span.separator hr {
 
 .campus-tools li > span.nolink {
   margin-top: 0;
+}
+
+#node-1 {
+  font-size: 110%;
+  padding: 1%;
+}
+#node-1 p.first-letter::first-letter {
+  margin-top: 10px;
+  margin-right: 8px;
+  font-size: 300%;
+  font-weight: bolder;
+  float: left;
+}
+
+#block-bcm-islandora-highlighted-asset-bcm-islandora-highlighted-asset .highlighted_digital_asset {
+  width: 98%;
+  margin: 1%;
+}
+#block-bcm-islandora-highlighted-asset-bcm-islandora-highlighted-asset .highlighted_digital_asset .highlighted_digital_asset_header {
+  margin: 1% 1% 0 1%;
+}
+#block-bcm-islandora-highlighted-asset-bcm-islandora-highlighted-asset .highlighted_digital_asset > div {
+  float: none;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  margin: 1%;
+  border: 1px solid #e3e3e3;
+}
+#block-bcm-islandora-highlighted-asset-bcm-islandora-highlighted-asset .highlighted_digital_asset > div .highlighted_digital_asset_thumbnail_image {
+  text-align: center;
+  margin: 1em;
+}
+#block-bcm-islandora-highlighted-asset-bcm-islandora-highlighted-asset .highlighted_digital_asset > div .highlighted_digital_asset_thumbnail_image img {
+  width: 100%;
+  max-width: 180px;
 }
 
 div.widgets-element-horizontal {
@@ -8285,11 +8359,17 @@ $s-width: 480px;
   }
 }
 @media (min-width: 1080px) and (max-width: 1199px) {
+  body.front .front-block {
+    width: 30%;
+  }
   body.front .front-block h3 {
     font-size: 110% !important;
   }
 }
 @media (min-width: 980px) and (max-width: 1079px) {
+  body.front .front-block {
+    width: 30%;
+  }
   body.front .front-block h3 {
     font-size: 100% !important;
     white-space: normal !important;
@@ -8299,6 +8379,10 @@ $s-width: 480px;
   .region-header #logo, .region-header #logo img {
     height: 64px;
     width: auto;
+  }
+
+  .front-block {
+    width: 30%;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -8315,11 +8399,12 @@ $s-width: 480px;
   }
 
   body.front .front-block {
-    height: 98px;
+    width: 31%;
   }
   body.front .front-block h3 {
-    font-size: 110% !important;
+    font-size: 100% !important;
     white-space: normal !important;
+    letter-spacing: 1px;
   }
   body.front .front-block i {
     font-size: 30px !important;
@@ -8355,12 +8440,12 @@ $s-width: 480px;
     /* front block width */
   }
   body.front .front-block {
-    width: 48%;
+    width: 98%;
     padding: 12px !important;
     margin: 1%;
   }
   body.front .front-block h3 {
-    font-size: 116% !important;
+    font-size: 120% !important;
   }
 }
 @media (max-width: 479px) {
@@ -8386,6 +8471,11 @@ $s-width: 480px;
   }
   body.front .front-block h3 {
     font-size: 116% !important;
+  }
+
+  #block-bcm-islandora-highlighted-asset-bcm-islandora-highlighted-asset .highlighted_digital_asset > div {
+    width: 80%;
+    margin: 1%;
   }
 }
 /* feedback_simple module CSS: ********************************

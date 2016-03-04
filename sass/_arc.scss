@@ -164,9 +164,13 @@ body.front {
 		text-align:center;
 	}
 
+	.region-stripes{
+		margin-top:1%;
+	}
 	.front-block{
 		display:inline-block;
 		vertical-align:top;
+		width:26%;
 
 		a{display:block; text-align:right; width:100%; color:#eee;}
 
@@ -179,12 +183,46 @@ body.front {
 		h3{
 			text-align: left;
 			font-size:125%;
-			font-weight:bold;
+			font-weight:100;
 			text-transform:uppercase;
 			color:#fff;
-			margin-bottom:8px;
-			//white-space:nowrap;
+			//margin-bottom:8px;
+			letter-spacing: 3px;
+			//white-space: nowrap;
 		}
+		h3:hover{
+			//color:#4c5960;
+		}
+
+		&.finding-aids{background-color:#4c5960;}
+		&.institutional-repo{background-color:#4c5960;}
+		&.digital-collections{background-color:#4c5960;}
+
+		&.finding-aids,
+		&.institutional-repo,
+		&.digital-collections{
+			//height: 98px;
+			position:relative;
+
+			a{position:absolute; bottom:0; right:0; padding: 0 12px 12px 0;}
+		}
+
+		&:hover{
+			background-color:#7b8b96;
+			cursor: pointer;
+			/*
+			-webkit-border-top-right-radius:30px;
+			-webkit-border-bottom-left-radius:30px;
+			-moz-border-radius-topright:30px;
+			-moz-border-radius-bottomleft:30px;
+			border-top-right-radius:30px;
+			border-bottom-left-radius:30px;
+			*/
+		}
+		&:active{
+			background-color:#ee243c;
+		}
+
 	}
 }
 
@@ -264,6 +302,54 @@ li {
 		}
 	}
 }
+
+#node-1{
+	font-size: 110%;
+	padding: 1%;
+
+	p.first-letter::first-letter{
+		margin-top: 10px;
+		margin-right: 8px;
+		font-size: 300%;
+		font-weight: bolder;
+		float: left;
+	}
+
+}
+
+#block-bcm-islandora-highlighted-asset-bcm-islandora-highlighted-asset{
+
+	.highlighted_digital_asset{
+		width: 98%;
+		margin: 1%;
+
+		.highlighted_digital_asset_header{
+			margin: 1% 1% 0 1%;
+		}
+
+		&>div{
+			float:none;
+			text-align: left;
+			display:inline-block;
+			vertical-align: top;
+			width: 30%;
+			margin:1%;
+			border:1px solid #e3e3e3;
+
+			.highlighted_digital_asset_thumbnail_image{
+				text-align: center;
+				margin: 1em;
+
+				img{
+					width:100%;
+					max-width: 180px;
+				}
+			}
+
+		}
+	}
+}
+
 
 div.widgets-element-horizontal{display:inline-block; float:none; margin:4px 2px;}
 
@@ -438,7 +524,7 @@ $s-width: 480px;
 @media (min-width: 1200px) and (max-width: 1320px) {
 	body.front{
 		.front-block h3{
-			font-size: 120% !important
+			font-size: 120% !important;
 		}
 	}
 }
@@ -450,16 +536,24 @@ $s-width: 480px;
 }
 @media (min-width: 1080px) and (max-width: 1199px) {
 	body.front{
-	  .front-block h3{
-		  font-size: 110% !important;
+	  .front-block{
+		  width: 30%;
+
+		  h3{
+		  	font-size: 110% !important;
+			}
 		}
 	}
 }
 @media (min-width: 980px) and (max-width: 1079px) {
 	body.front{
-	  .front-block h3{
-		  font-size: 100% !important;
-			white-space: normal !important;
+	  .front-block{
+		  width: 30%;
+
+		  h3{
+			  font-size: 100% !important;
+				white-space: normal !important;
+			}
 		}
 	}
 }
@@ -468,6 +562,10 @@ $s-width: 480px;
     height: 64px;
     width: auto;
   }
+
+	.front-block{
+		width: 30%;
+	}
 }
 @media (min-width: 768px) and (max-width: 979px) {
   .region-header #logo, .region-header #logo img {
@@ -483,11 +581,12 @@ $s-width: 480px;
 
 	body.front{
 	  .front-block{
-		  height: 98px;
+		  width: 31%;
 
 		  h3{
-			  font-size: 110% !important;
+			  font-size: 100% !important;
 			  white-space: normal !important;
+			  letter-spacing: 1px;
 			}
 
 			i{font-size: 30px !important;}
@@ -506,6 +605,13 @@ $s-width: 480px;
 			//width:48%;
 			padding:12px;
 			margin:1%;
+
+			&.finding-aids,
+			&.institutional-repo,
+			&.digital-collections{
+				//width:25%;
+			}
+
 		}
 	}
 }
@@ -525,11 +631,11 @@ $s-width: 480px;
 	body.front{
 		/* front block width */
 	  .front-block{
-			width:48%;
+			width:98%;
 			padding:12px !important;
 			margin:1%;
 			h3{
-				font-size: 116% !important;
+				font-size: 120% !important;
 			}
 		}
 	}
@@ -558,6 +664,11 @@ $s-width: 480px;
 				font-size: 116% !important;
 			}
 		}
+	}
+
+	#block-bcm-islandora-highlighted-asset-bcm-islandora-highlighted-asset .highlighted_digital_asset >div{
+		width: 80%;
+		margin:1%;
 	}
 }
 
