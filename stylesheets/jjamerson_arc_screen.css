@@ -8492,7 +8492,7 @@ $s-width: 480px;
 }
 @media (min-width: 480px) and (max-width: 767px) {
   .region-header #logo, .region-header #logo img {
-    height: 34px;
+    height: 40px;
   }
 
   .region-header #logo {
@@ -8500,7 +8500,7 @@ $s-width: 480px;
     position: absolute;
     left: 0;
     width: auto;
-    top: 0.8em;
+    top: 9px;
   }
 
   body.front {
@@ -8517,7 +8517,7 @@ $s-width: 480px;
 }
 @media (max-width: 479px) {
   .region-header #logo, .region-header #logo img {
-    height: 34px;
+    height: 40px;
   }
 
   .region-header #logo {

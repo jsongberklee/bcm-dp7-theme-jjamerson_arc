@@ -75,45 +75,6 @@ function jjamerson_arc_preprocess_page(&$variables) {
     }
   }
 
-  if (drupal_is_front_page() ) {
-    drupal_add_js('//maps.googleapis.com/maps/api/js?libraries=geometry', array('type'  => 'external'));
-
-    // VideoJS components:
-    drupal_add_js('//vjs.zencdn.net/4.12/video.js', array('type'  => 'external', 'scope' => 'footer'));
-    drupal_add_css('//vjs.zencdn.net/4.12/video-js.css', array('type'  => 'external'));
-
-    /* inline JS for aligning <div> height matches with other divs, compatible with all major browsers, by jsong */
-    /* on click attached to the selected blocks to make the whole area is clickable, by jsong */
-    /* place Recent Acquisition and Feature blocks before the social buttons on mobile phone (< 479) */
-    drupal_add_js('
-			jQuery(window).bind("load resize",function(e){
-				var $bcmW = jQuery(e.target).width();
-				if($bcmW > 767){
-					var $t = jQuery(".front-block.top-resources");
-					var $a = jQuery(".front-block.services");
-					var $th = (($a.outerHeight() + $a.offset().top) - $t.offset().top)+"px";
-					$t.height($th);
-				}else if(($bcmW < 767) && ($bcmW > 479)){
-					var $t = jQuery(".front-block.top-resources");
-					var $a = jQuery(".front-block.libguides");
-					var $th = (($a.outerHeight() + $a.offset().top) - $t.offset().top)+"px";
-					$t.height($th);
-				}else if($bcmW < 479){
-					jQuery("#block-block-20").after(jQuery("#block-block-27"));
-					jQuery("#block-block-27").after(jQuery("#block-views-b3ece016db0169908c14ac469f1bacd4"));
-				}
-			});
-
-			jQuery(document).ready(function(){
-				jQuery("#block-block-6, #block-block-8, #block-block-7").click(function(e){
-					window.location.href = jQuery(this).find("a").attr("href");
-				});
-			});
-
-			', 'inline');
-
-  }
-
   /* Allows you to use node-type, and node ID base page templates: */
   if (!empty($variables['node'])) {
     $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
