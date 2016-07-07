@@ -1856,7 +1856,7 @@ Swap the logo to the mobile version
 */
 jQuery(window).bind("load resize",function(e){
 	var $bcmW = jQuery(e.target).width();
-	if($bcmW < 768) jQuery('#logo>img').attr('src', '/sites/all/themes/jjamerson_arc/logo-arc-mobile.png');
+	if($bcmW < 768) jQuery('#logo>img').attr('src', '/sites/all/themes/jjamerson_arc/logo-arc-mobile.svg');
 	else jQuery('#logo>img').attr('src', '/sites/all/themes/jjamerson_arc/logo.png');
 });
 jQuery(document).ready(function($){
