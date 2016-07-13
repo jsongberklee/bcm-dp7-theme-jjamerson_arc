@@ -117,7 +117,7 @@ jQuery(document).ready(function($){
 
     });
 
-    campusToolsMenu.detach().insertAfter(mainMenu);
+    //campusToolsMenu.detach().insertAfter(mainMenu);
 
     var sectionMenus = $('.region-sidebar-first .block-menu, .region-sidebar-first .block-dynamic-book-block, .region-sidebar-first .block-berklee-site-section:not(#block-berklee-site-section-breadcrumb)');
     sectionMenus.each(function() {

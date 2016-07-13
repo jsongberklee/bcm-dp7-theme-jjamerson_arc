@@ -8,7 +8,11 @@ jQuery(document).ready(function(){
 Swap the logo to the mobile version 
 */
 jQuery(window).bind("load resize",function(e){
-	var $bcmW = jQuery(e.target).width();
-	if($bcmW < 768) jQuery('#logo>img').attr('src', '/sites/all/themes/jjamerson_arc/logo-arc-mobile.svg');
-	else jQuery('#logo>img').attr('src', '/sites/all/themes/jjamerson_arc/logo.png');
+	if(jQuery(e.target).width() < 768){
+		jQuery('#logo>img').attr({'src':'/sites/all/themes/jjamerson_arc/logo-arc-mobile.svg','alt':'Berklee Archives Logo','title':'Berklee Archives Homepage'});
+		jQuery('#logo').attr('href', '/');
+	}else{
+		jQuery('#logo>img').attr({'src':'/sites/all/themes/jjamerson_arc/logo.png','alt':'Berklee Logo','title':'Berklee Homepage'});
+		jQuery('#logo').attr('href', 'https://berklee.edu');
+	}
 });
